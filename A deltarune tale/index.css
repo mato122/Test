@@ -1,0 +1,174 @@
+
+body {
+    background-color: black;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hid {
+    opacity: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.text {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+
+    text-align: center;
+    width: max-content;
+    max-width: 90%;
+}
+
+.prince iframe {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    opacity: 5%;
+}
+
+.prince img {
+    position: relative;
+    z-index: 1;
+}
+
+
+.typing-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+
+    padding-left: 0;
+}
+
+.typing {
+    white-space: nowrap;
+    overflow: hidden;
+
+    border-right: 1ch solid;
+
+    margin: 0 auto 0.2em auto;
+}
+
+
+
+.typing.line-1 {
+    width: 9ch;
+
+    animation:
+        cursor-blink 1.06s steps(2, jump-none) 0.00s 2 none,
+        cursor-typing 0.90s steps(9) 2.12s backwards,
+        cursor-blink 1.06s steps(2, jump-none) 3.02s 2 forwards,
+        cursor-gone 0s 5.14s forwards;
+}
+
+
+.typing.line-2 {
+    width: 0ch;
+
+    animation:
+        cursor-gone 5.14s,
+        cursor-typing 0.10s steps(1) 5.14s backwards,
+        cursor-gone 0s 5.24s forwards;
+}
+
+
+
+.typing.line-3 {
+    width: 26ch;
+
+    animation:
+        cursor-gone 5.24s,
+        cursor-blink 1.06s steps(2, jump-none) 5.24s 2 none,
+        cursor-typing 2.60s steps(26) 7.36s backwards,
+        cursor-blink 1.06s steps(2, jump-none) 9.96s 2 forwards,
+        cursor-gone 0s 12.08s forwards;
+}
+
+
+
+.typing.line-4 {
+    width: 0ch;
+
+    animation:
+        cursor-gone 12.08s,
+        cursor-typing 0.10s steps(1) 12.08s backwards,
+        cursor-gone 0s 12.18s forwards;
+}
+
+
+
+.typing.line-5 {
+    width: 48ch;
+
+    animation:
+        cursor-gone 12.18s,
+        cursor-blink 1.06s steps(2, jump-none) 12.18s 2 none,
+        cursor-typing 4.80s steps(48) 14.30s backwards,
+        cursor-blink 1.06s steps(2, jump-none) 19.10s 2 forwards,
+        cursor-gone 0s 21.22s forwards;
+}
+
+
+
+.typing.line-6 {
+    width: 0ch;
+
+    animation:
+        cursor-gone 21.22s,
+        cursor-typing 0.10s steps(1) 21.22s backwards,
+        cursor-gone 0s 21.32s forwards;
+}
+
+
+
+.typing.line-7 {
+    width: 45ch;
+
+    animation:
+        cursor-gone 21.32s,
+        cursor-blink 1.06s steps(2, jump-none) 21.32s 2 none,
+        cursor-typing 4.50s steps(45) 23.44s backwards,
+        cursor-blink 1.06s steps(2, jump-none) 27.94s infinite;
+}
+
+@keyframes cursor-typing {
+    from {
+        width: 0;
+    }
+}
+
+
+@keyframes cursor-blink {
+    to {
+        border-color: transparent;
+    }
+}
+
+
+@keyframes cursor-gone {
+    from,
+    to {
+        border-color: transparent;
+    }
+}
